@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0"
+    />
+    <title>Baystreet Group INC - Product Details</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./assets/img/logoB.png"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/img/favicon.png"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+    <!-- Feathericon CSS -->
+    <link rel="stylesheet" href="assets/css/feathericon.min.css" />
+
+    <!-- Light Gallery CSS -->
+    <link
+      rel="stylesheet"
+      href="assets/plugins/light-gallery/css/lightgallery.min.css"
+    />
+    <!-- Datatables CSS -->
+    <link
+      rel="stylesheet"
+      href="assets/plugins/datatables/datatables.min.css"
+    />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.min.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- Main Wrapper -->
+    <div class="main-wrapper">
+      <!-- Header -->
+      <div class="header">
+        <!-- Logo -->
+        <div class="header-left">
+          <a href="index.html" class="logo">
+            <img src="assets/img/logo-via-logohub.png" alt="Logo" />
+          </a>
+        </div>
+        <!-- /Logo -->
+
+        <a href="javascript:void(0);" id="toggle_btn">
+          <i class="fe fe-text-align-left"></i>
+        </a>
+
+        <div class="top-nav-search">
+          <form>
+            <input type="text" class="form-control" placeholder="Search here" />
+            <button class="btn" type="submit">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+        </div>
+        <ul class="nav user-menu">
+          <li class="nav-item dropdown has-arrow show">
+            <a
+              href="#"
+              class="dropdown-toggle nav-link"
+              data-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <span class="user-name">Admin</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" id="logout"> Logout </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- /Header -->
+
+      <!-- Sidebar -->
+      <div class="sidebar" id="sidebar">
+        <div class="sidebar-inner slimscroll">
+          <div id="sidebar-menu" class="sidebar-menu">
+            <ul>
+              <li class="menu-title">
+                <span>Main</span>
+              </li>
+              <li class="active">
+                <a href="index.html"
+                  ><i class="fe fe-home"></i> <span>Dashboard</span></a
+                >
+              </li>
+              <li class="submenu">
+                <a href="#"
+                  ><i class="fe fe-cart"></i> <span>Condo-List</span>
+                  <span class="menu-arrow"></span
+                ></a>
+                <ul style="display: none;">
+                  <li><a href="products.html">Projects</a></li>
+									<!-- <li><a href="nordic.html">Product View</a></li> -->
+                </ul>
+              </li>
+              <!-- <li class="submenu">
+                <a href="#"
+                  ><i class="fe fe-tiled"></i> <span> Application</span>
+                  <span class="menu-arrow"></span
+                ></a>
+                <ul style="display: none;">
+                  <li><a href="#">Calculate</a></li>
+                  <li><a href="#">Calendar</a></li>
+                </ul>
+              </li>
+              <li class="menu-title">
+                <span>Pages</span>
+              </li>
+              <li>
+                <a href="profile.html"
+                  ><i class="fe fe-user-plus"></i> <span>Profile</span></a
+                >
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- /Sidebar -->
+
+      <!-- Page Wrapper -->
+      <div class="page-wrapper">
+        <div class="content container-fluid">
+          <div class="page-header">
+            <div class="row">
+              <div class="col-sm-12">
+                <h3 class="page-title">Product Details</h3>
+                <ul class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a href="index.html">Dashboard</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="products.html">Product View</a>
+                  </li>
+                  <li class="breadcrumb-item active">Product Details</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6 col-sm-12">
+                  <div class="product-view">
+                    <div class="proimage-wrap">
+                      <div class="pro-image" id="pro_popup">
+                        <a href="assets/img/inde/inde1.jpg">
+                          <img
+                            class="img-fluid"
+                            src="assets/img/inde/inde1.jpg"
+                            alt="Product Image"
+                          />
+                        </a>
+                      </div>
+                      <ul class="proimage-thumb">
+                        <li>
+                          <a href="assets/img/inde/inde1.jpg"
+                            ><img
+                              src="assets/img/inde/inde1_thumb.jpg"
+                              alt="Product Image"
+                          /></a>
+                        </li>
+                        <li>
+                          <a href="assets/img/inde/inde2.jpg"
+                            ><img
+                              src="assets/img/inde/inde2_thumb.jpg"
+                              alt="Product Image"
+                          /></a>
+                        </li>
+                        <li>
+                          <a href="assets/img/inde/inde3.jpg"
+                            ><img
+                              src="assets/img/inde/inde3_thumb.jpg"
+                              alt="Product Image"
+                          /></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <div class="product-info">
+                    <h2>in.DE Condos</h2>
+                    <p class="mb-0">Website: -</p>
+                    <p id="inde_date">Updata Date: </p>
+                    <p class="product_price" id="psf_inde"></p>
+                    <p><b>Construction Status:</b> Construction</p>
+                    <div>
+                      <a href="http://tiny.cc/uutvgz" target="_blank">
+                        <button type="button" class="btn btn-primary">
+                          OPEN DROPBOX LINK
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <ul class="nav nav-tabs nav-tabs-bottom" id="mytab">
+                    <li class="nav-item">
+                      <a
+                        class="nav-link getdataInde active"
+                        href="#product_hotlist"
+                        data-toggle="tab"
+                        >HotList</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        href="#product_desc"
+                        data-toggle="tab"
+                        >Description</a
+                      >
+                    </li>
+                    
+                  </ul>
+                  <div class="tab-content">
+                    <div class="tab-pane" id="product_desc">
+                      <div class="product-content">
+                        <h5 style="font-weight: bold;" id="incentives">Incentives: </h5>
+                        <div class="incentives">
+                          <ul>
+                            <li>Assignment $2500+HST</li>
+                            <li>Right to Lease during Interim Occupancy</li>
+                            <li>Free blinds</li>
+                            <li>Capped development charges ($9000/ 2B&3B: $12500)</li>
+                            <li>Meter Installation Cap ($1000)</li>
+                          </ul>
+                        </div>
+                        <h5 style="font-weight: bold;" id="deposit">Deposit Structure: </h5>
+                        <div class="deposit">
+                          <ul>
+                            <li><strong>$10,000</strong> on signing </li>
+                            <li>Balance to <strong>5%</strong> in 30 days</li>
+                            <li><strong>5%</strong> in 90 days</li>
+                            <li><strong>5%</strong> in 180 days</li>
+                            <li><strong>5%</strong> in <span style="text-decoration: line-through;">270 days</span> 360 days</li>
+                            <li><strong>1%</strong> on occupancy</li>
+                          </ul>
+                        </div>
+                        <h5 style="font-weight: bold;" id="parkingandlocker">Parking and Locker: </h5>
+                        <div class="parkingandlocker">
+                          <span>Parking: $80,000</span><br><span>Locker: Waitlist</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane show active" id="product_hotlist">
+                      <div
+                        class="table-responsive"
+                      >
+                        <table
+                          class="table table-sm table-hover"
+                          id="inde"
+                          style="font-size: small;"
+                        >
+                          <thead style="font-style: oblique; font-weight: 900;">
+                            <tr>
+                              <th>Suite</th>
+                              <th>Model</th>
+                              <th>Bedroom</th>
+                              <th>Size</th>
+                              <th>Exposure</th>
+                              <th>Bathroom</th>
+                              <th>Price</th>
+                              <th>PSF</th>
+                            </tr>
+                          </thead>
+                          <tbody id="table_products"></tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <!--THIS IS EXTRA FUNCTION FOR REVIEW-WRITE -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Page Wrapper -->
+    </div>
+    <!-- /Main Wrapper -->
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/condos_ajax.js"></script>
+    <script src="assets/js/logout_page.js"></script>
+    <script src="assets/js/jquery.cookie.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <!-- Bootstrap Core JS -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Datatables JS -->
+    <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/plugins/datatables/datatables.min.js"></script>
+    <!-- Slimscroll JS -->
+    <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Light Gallery JS -->
+    <script src="assets/plugins/light-gallery/js/lightgallery-all.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

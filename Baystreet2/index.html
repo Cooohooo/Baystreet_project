@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0"
+    />
+    <title>Baystreet Group INC - Dashboard</title>
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./assets/img/logoB.png"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+    <!-- Feathericon CSS -->
+    <link rel="stylesheet" href="assets/css/feathericon.min.css" />
+
+    <link rel="stylesheet" href="assets/plugins/morris/morris.css" />
+
+    <!-- Datatables CSS -->
+    <link
+      rel="stylesheet"
+      href="assets/plugins/datatables/datatables.min.css"
+    />
+    <!-- Select2 CSS -->
+    <link rel="stylesheet" href="./assets/css/select2.min.css" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body data-spy="scroll" data-target=".fixed-top">
+    <!-- Main Wrapper -->
+    <div class="main-wrapper">
+      <!-- Header -->
+      <div class="header">
+        <!-- Logo -->
+        <div class="header-left">
+          <a href="index.html" class="logo">
+            <img src="assets/img/logo-via-logohub.png" alt="Logo" />
+          </a>
+          <a href="index.html" class="logo logo-small">
+            <img
+              src="assets/img/logo-small.png"
+              alt="Small-logo"
+              width="30"
+              height="30"
+            />
+          </a>
+        </div>
+        <!-- /Logo -->
+
+        <a href="javascript:void(0);" id="toggle_btn">
+          <i class="fe fe-text-align-left"></i>
+        </a>
+
+        <div class="top-nav-search">
+          <form>
+            <input type="text" class="form-control" placeholder="Search here" />
+            <button class="btn" type="submit">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <a class="mobile_btn" id="mobile_btn">
+          <i class="fa fa-bars"></i>
+        </a>
+        <!-- /Mobile Menu Toggle -->
+
+        <ul class="nav user-menu">
+          <li class="nav-item dropdown has-arrow show">
+            <a
+              href="#"
+              class="dropdown-toggle nav-link"
+              data-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <span class="user-name">Admin</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" id="logout" href="#"> Logout </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- /Header -->
+
+      <!-- Sidebar -->
+      <div class="sidebar" id="sidebar">
+        <div class="sidebar-inner slimscroll">
+          <div id="sidebar-menu" class="sidebar-menu">
+            <ul>
+              <li class="menu-title">
+                <span>Main</span>
+              </li>
+              <li class="active">
+                <a href="index.html"
+                  ><i class="fe fe-home"></i> <span>Dashboard</span></a
+                >
+              </li>
+              <li class="submenu">
+                <a href="#"
+                  ><i class="fe fe-cart"></i> <span>Condo-List</span>
+                  <span class="menu-arrow"></span
+                ></a>
+                <ul style="display: none;">
+                  <li><a href="products.html">Projects</a></li>
+                  <!-- <li><a href="nordic.html">Product View</a></li> -->
+                </ul>
+              </li>
+              <!-- <li class="submenu">
+								<a href="#"><i class="fe fe-tiled"></i> <span> Application</span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;">
+									<li><a href="#">Calculate</a></li>
+									<li><a href="#">Calendar</a></li>
+								</ul>
+							</li>
+							<li class="menu-title"> 
+								<span>Pages</span>
+							</li>
+							<li> 
+								<a href="profile.html"><i class="fe fe-user-plus"></i> <span>Profile</span></a>
+							</li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- /Sidebar -->
+
+      <!-- Page Wrapper -->
+      <div class="page-wrapper">
+        <div class="content container-fluid">
+          <!-- Page Header -->
+          <div class="page-header">
+            <div class="row">
+              <div class="col-sm-12">
+                <h3 class="page-title">Welcome</h3>
+                <ul class="breadcrumb">
+                  <li class="breadcrumb-item active">Dashboard</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- /Page Header -->
+
+          <div class="row">
+            <div class="col-xl-3 col-sm-6 col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="dash-widget-header">
+                    <span class="dash-widget-icon bg-primary">
+                      <i class="fe fe-users"></i>
+                    </span>
+                  </div>
+                  <div class="dash-widget-info">
+                    <h5 class="text-muted" id="sumofcondos">
+                      Condos in List: &nbsp;
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="dash-widget-header">
+                    <span class="dash-widget-icon bg-warning">
+                      <i class="fe fe-folder"></i>
+                    </span>
+                    <div class="dash-count">
+                      <span id="ratiomarkham" style="font-weight: bold;"></span>
+                    </div>
+                  </div>
+                  <div class="dash-widget-info">
+                    <h5 class="text-muted" id="markham">Markham: &nbsp;</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="dash-widget-header">
+                    <span class="dash-widget-icon bg-warning">
+                      <i class="fe fe-folder"></i>
+                    </span>
+                    <div class="dash-count">
+                      <span
+                        id="ratiodowntown"
+                        style="font-weight: bold;"
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="dash-widget-info">
+                    <h5 class="text-muted" id="downtown">Downtown: &nbsp;</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="dash-widget-header">
+                    <span class="dash-widget-icon bg-warning">
+                      <i class="fe fe-folder"></i>
+                    </span>
+                    <div class="dash-count">
+                      <span
+                        id="rationorthyork"
+                        style="font-weight: bold;"
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="dash-widget-info">
+                    <h5 class="text-muted" id="northyork">
+                      North York: &nbsp;
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="dash-widget-header">
+                    <span class="dash-widget-icon bg-warning">
+                      <i class="fe fe-folder"></i>
+                    </span>
+                    <div class="dash-count">
+                      <span id="ratiomidtown" style="font-weight: bold;"></span>
+                    </div>
+                  </div>
+                  <div class="dash-widget-info">
+                    <h5 class="text-muted" id="midtown">Midtown: &nbsp;</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="dash-widget-header">
+                    <span class="dash-widget-icon bg-warning">
+                      <i class="fe fe-folder"></i>
+                    </span>
+                    <div class="dash-count">
+                      <span
+                        id="ratioetobicoke"
+                        style="font-weight: bold;"
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="dash-widget-info">
+                    <h5 class="text-muted" id="etobicoke">Etobicoke: &nbsp;</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="dash-widget-header">
+                    <span class="dash-widget-icon bg-warning">
+                      <i class="fe fe-folder"></i>
+                    </span>
+                    <div class="dash-count">
+                      <span id="ratiovaughan" style="font-weight: bold;"></span>
+                    </div>
+                  </div>
+                  <div class="dash-widget-info">
+                    <h5 class="text-muted" id="vaughan">Vaughan: &nbsp;</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="dash-widget-header">
+                    <span class="dash-widget-icon bg-warning">
+                      <i class="fe fe-folder"></i>
+                    </span>
+                    <div class="dash-count">
+                      <span
+                        id="ratiooakville"
+                        style="font-weight: bold;"
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="dash-widget-info">
+                    <h5 class="text-muted" id="oakville">Oakville: &nbsp;</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="dash-widget-header">
+                    <span class="dash-widget-icon bg-warning">
+                      <i class="fe fe-folder"></i>
+                    </span>
+                    <div class="dash-count">
+                      <span
+                        id="ratioscarborough"
+                        style="font-weight: bold;"
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="dash-widget-info">
+                    <h5 class="text-muted" id="scarborough">
+                      Scarborough: &nbsp;
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="dash-widget-header">
+                    <span class="dash-widget-icon bg-warning">
+                      <i class="fe fe-folder"></i>
+                    </span>
+                    <div class="dash-count">
+                      <span
+                        id="ratiomississauga"
+                        style="font-weight: bold;"
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="dash-widget-info">
+                    <h5 class="text-muted" id="mississauga">
+                      Mississauga: &nbsp;
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="dash-widget-header">
+                    <span class="dash-widget-icon bg-warning">
+                      <i class="fe fe-folder"></i>
+                    </span>
+                    <div class="dash-count">
+                      <span
+                        id="ratiothornhill"
+                        style="font-weight: bold;"
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="dash-widget-info">
+                    <h5 class="text-muted" id="thornhill">Thornhill: &nbsp;</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="dash-widget-header">
+                    <span class="dash-widget-icon bg-warning">
+                      <i class="fe fe-folder"></i>
+                    </span>
+                    <div class="dash-count">
+                      <span id="ratiorich" style="font-weight: bold;"></span>
+                    </div>
+                  </div>
+                  <div class="dash-widget-info">
+                    <h5 class="text-muted" id="richmondhill">
+                      Richmond Hill: &nbsp;
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 col-lg-6">
+              <!-- Sum Donut Chart -->
+              <div class="card card-chart">
+                <div class="card-header">
+                  <h4 class="card-title">Summary of areas</h4>
+                </div>
+                <div class="card-body">
+                  <div id="donutArea"></div>
+                </div>
+              </div>
+              <!-- /Sum Donut Chart -->
+            </div>
+            <div class="col-md-12 col-lg-6">
+              <div class="card card-chart">
+                <div class="card-header">
+                  <select name="areas" id="areas">
+                    <option value="Markham">Markham</option>
+                    <option value="Downtown" selected>Downtown</option>
+                    <option value="North York">North York</option>
+                    <option value="Midtown">Midtown</option>
+                    <option value="Scarborough">Scarborough</option>
+                    <option value="Richmond Hill">Richmond Hill</option>
+                    <option value="Vaughan">Vaughan</option>
+                    <option value="Thornhill">Thornhill</option>
+                    <option value="Mississauga">Mississauga</option>
+                    <option value="Oakville">Oakville</option>
+                    <option value="Etobicoke">Etobicoke</option>
+                  </select>
+                </div>
+                <div class="card-body">
+                  <div id="barArea"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-12 col-lg-12">
+              <!-- Sales Table -->
+              <div class="card card-chart">
+                <div class="card-header">
+                  <h4 class="card-title">Condos Overview</h4>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="table-responsive"
+                    data-spy="scroll"
+                    data-target="#temp"
+                    data-offset="0"
+                  >
+                    <table
+                      class="table table-sm table-hover"
+                      id="mytable"
+                      style="font-size: small;"
+                    >
+                      <thead style="font-style: oblique; font-weight: 900;">
+                        <tr>
+                          <th>Project Name</th>
+                          <th>Intersection</th>
+                          <th>Region</th>
+                          <th>Avg PSF</th>
+                          <th>Price Range</th>
+                          <th>PSF Range</th>
+                          <th>Update Date</th>
+                        </tr>
+                      </thead>
+                      <tbody></tbody>
+                      <tfoot>
+                        <tr>
+                          <th>Project Name</th>
+                          <th>Intersection</th>
+                          <th>Region</th>
+                          <th>Avg PSF</th>
+                          <th>Price Range</th>
+                          <th>PSF Range</th>
+                          <th>Update Date</th>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                </div>
+                <!-- /Sales Table -->
+              </div>
+            </div>
+
+            <!-- <div class="row">
+						<div class="col-md-12 d-flex"> -->
+
+            <!-- Recent Orders -->
+            <!-- <div class="card card-table flex-fill">
+								<div class="card-header">
+									<h4 class="card-title">Recent Updates</h4>
+								</div>
+								<div class="card-body">
+									<div class="table-responsive">
+										<table class="table table-hover table-center">
+											<thead>
+												<tr>
+													<th>Project Name</th>
+													<th>Date</th>
+													<th class="text-center">Region</th>
+													<th class="text-center">Quantity</th>
+													<th class="text-center">Status</th>
+													<th class="text-right">Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="text-nowrap">
+														<div class="font-weight-600">aaaaaa</div>
+													</td>
+													<td class="text-nowrap">1 1 2019</td>
+													<td class="text-center">markham</td>
+													<td class="text-center">1</td>
+													<td class="text-center">
+														<span class="badge badge-pill bg-success inv-badge">Completed</span>
+													</td>
+													<td class="text-right">
+														<div class="font-weight-600">$111</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div> -->
+            <!-- /Recent Orders -->
+
+            <!-- </div> -->
+          </div>
+
+          <div class="row" id="temp">
+            <div class="col-md-12 col-lg-12">
+              <!-- Sales Chart -->
+              <div class="card card-chart">
+                <div class="card-header">
+                  <h4 class="card-title">Condos Price-List</h4>
+                </div>
+                <div class="card-body">
+                  <div id="morrisArea"></div>
+                </div>
+              </div>
+              <!-- /Sales Chart -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Page Wrapper -->
+    </div>
+    <!-- /Main Wrapper -->
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/jquery.cookie.js"></script>
+    <script>
+      $(document).ready(function() {
+        var dataL = [];
+        alert($.cookie("name_of_usr"));
+        login = $.cookie("name_of_usr");
+        // INDEX PAGE GETTING ALL CONDOS INFO
+        $.ajax({
+          type: "GET",
+          url: "http://127.0.0.1:8000/",
+          dataType: "json",
+          data: { login_name: $.cookie("name_of_usr") },
+          withCredential: true,
+          success: function(result) {
+            if (result.loginrequired_get == "true") {
+              alert("Need to login for whole page.");
+              event.stopPropagation();
+            } else {
+              var resultObj;
+              var calPrice = "";
+              var calPSF = "";
+              var resultDatatable = '{"result":[';
+              for (var i = 0; i < result.result.length; i++) {
+                var transMIP = parseInt(result.result[i].Min_price) / 1000;
+                var transMXP = parseInt(result.result[i].Max_price) / 1000;
+                if (transMIP > 1000) {
+                  calPrice =
+                    Math.ceil(transMIP) / 1000 +
+                    "M" +
+                    " - " +
+                    Math.ceil(transMXP) / 1000 +
+                    "M";
+                } else {
+                  if (transMIP >= 999 && transMIP <= 1000) {
+                    calPrice =
+                      Math.ceil(transMIP) / 1000 +
+                      "M" +
+                      " - " +
+                      Math.ceil(transMXP) / 1000 +
+                      "M";
+                  } else {
+                    if (transMXP >= 1000) {
+                      calPrice =
+                        Math.ceil(transMIP) +
+                        "K" +
+                        " - " +
+                        Math.ceil(transMXP) / 1000 +
+                        "M";
+                    } else {
+                      calPrice =
+                        Math.ceil(transMIP) +
+                        "K" +
+                        " - " +
+                        Math.ceil(transMXP) +
+                        "K";
+                    }
+                  }
+                }
+                calPSF =
+                  "$" +
+                  result.result[i].Min_PSF +
+                  " - " +
+                  "$" +
+                  result.result[i].Max_PSF;
+                if (i != result.result.length - 1) {
+                  resultDatatable +=
+                    "{" +
+                    '"' +
+                    "Project_Name" +
+                    '"' +
+                    ":" +
+                    '"' +
+                    result.result[i].Project_Name +
+                    '"' +
+                    "," +
+                    '"' +
+                    "Intersection" +
+                    '"' +
+                    ":" +
+                    '"' +
+                    result.result[i].Intersection +
+                    '"' +
+                    "," +
+                    '"' +
+                    "Region" +
+                    '"' +
+                    ":" +
+                    '"' +
+                    result.result[i].Region +
+                    '"' +
+                    "," +
+                    '"' +
+                    "Avg_PSF" +
+                    '"' +
+                    ":" +
+                    '"' +
+                    "$" +
+                    result.result[i].avg_psf +
+                    '"' +
+                    "," +
+                    '"' +
+                    "Cal_price" +
+                    '"' +
+                    ":" +
+                    '"' +
+                    calPrice +
+                    '"' +
+                    "," +
+                    '"' +
+                    "Cal_psf" +
+                    '"' +
+                    ":" +
+                    '"' +
+                    calPSF +
+                    '"' +
+                    "," +
+                    '"' +
+                    "Updates" +
+                    '"' +
+                    ":" +
+                    '"' +
+                    result.result[i].Updates +
+                    '"' +
+                    "}" +
+                    ",";
+                } else {
+                  resultDatatable +=
+                    "{" +
+                    '"' +
+                    "Project_Name" +
+                    '"' +
+                    ":" +
+                    '"' +
+                    result.result[i].Project_Name +
+                    '"' +
+                    "," +
+                    '"' +
+                    "Intersection" +
+                    '"' +
+                    ":" +
+                    '"' +
+                    result.result[i].Intersection +
+                    '"' +
+                    "," +
+                    '"' +
+                    "Region" +
+                    '"' +
+                    ":" +
+                    '"' +
+                    result.result[i].Region +
+                    '"' +
+                    "," +
+                    '"' +
+                    "Avg_PSF" +
+                    '"' +
+                    ":" +
+                    '"' +
+                    "$" +
+                    result.result[i].avg_psf +
+                    '"' +
+                    "," +
+                    '"' +
+                    "Cal_price" +
+                    '"' +
+                    ":" +
+                    '"' +
+                    calPrice +
+                    '"' +
+                    "," +
+                    '"' +
+                    "Cal_psf" +
+                    '"' +
+                    ":" +
+                    '"' +
+                    calPSF +
+                    '"' +
+                    "," +
+                    '"' +
+                    "Updates" +
+                    '"' +
+                    ":" +
+                    '"' +
+                    result.result[i].Updates +
+                    '"' +
+                    "}";
+                }
+              }
+              resultDatatable += "]}";
+              resultObj = JSON.parse(resultDatatable);
+              temp = resultObj.result;
+              var lang = {
+                sProcessing: "Loading data from MySQL...",
+                sEmptyTable: "Table is empty, check database",
+                sInfoThousands: ","
+              };
+              $("#mytable").DataTable({
+                language: lang,
+                lengthMenu: [25, 65, 100],
+                autoWidth: true,
+                bJQueryUI: true,
+                data: temp,
+                dataSrc: "",
+                columns: [
+                  { data: "Project_Name" },
+                  { data: "Intersection" },
+                  { data: "Region" },
+                  { data: "Avg_PSF" },
+                  { data: "Cal_price" },
+                  { data: "Cal_psf" },
+                  { data: "Updates" }
+                ]
+              });
+              // 在每一个footer单元格中添加一个input输入框
+              $("#mytable tfoot th").each(function() {
+                var title = $(this).text();
+                $(this).html(
+                  '<input type="text" placeholder="Search ' + title + '" />'
+                );
+              });
+              // 获取 datatable 对象
+              var table = $("#mytable").DataTable();
+              // 根据footer输入框的内容进行搜索
+              table.columns().every(function() {
+                var that = this;
+                $("input", this.footer()).on("keyup change", function() {
+                  if (that.search() != this.value) {
+                    that.search(this.value).draw();
+                  }
+                });
+              });
+            }
+          },
+          error: function() {
+            console.log("没有从服务器传回正确的数据");
+          }
+        });
+        // DEFAULT BARCHART
+        $("#areas").select2({
+          width: "15rem",
+          placeholder: "choose the region",
+          allowClear: false
+        });
+        var linechartdefault = $("#areas").val();
+        var defaultname = {
+          name: linechartdefault,
+          login_name: $.cookie("name_of_usr")
+        };
+        $.ajax({
+          type: "POST",
+          url: "http://127.0.0.1:8000/barchart",
+          crossDomin: true,
+          data: defaultname,
+          dataType: "json",
+          withCredential: true,
+          success: function(result) {
+            if (result.loginrequired_post == "true") {
+              alert("Need to login for whole page.");
+              event.stopPropagation();
+            } else {
+              var obj = new Object();
+              for (var i = 0; i < result.result.length; i++) {
+                var obj = new Object();
+                obj.y = result.result[i].project_name;
+                obj.a = parseInt(result.result[i].Avg_PSF);
+                dataL.push(obj);
+              }
+              window.mA = Morris.Bar({
+                element: "barArea",
+                data: dataL,
+                xkey: "y",
+                ykeys: ["a"],
+                labels: ["AVG-PSF"],
+                barColors: ["#2f66a8", "#bbb"],
+                lineWidth: 0,
+                fillOpacity: 0.5,
+                gridTextSize: 10,
+                hideHover: "auto",
+                stacked: false,
+                resize: true,
+                redraw: true
+              });
+              dataL = [];
+            }
+          },
+          error: function() {
+            console.log("没有从服务器传回正确的数据");
+          }
+        });
+        // AREA BARCHART WHEN OPTION SELECTED
+        $("#areas").on("select2:select", function() {
+          $("#barArea").empty();
+          var areaname = $(this).val();
+          var data = {
+            name: areaname,
+            login_name: $.cookie("name_of_usr")
+          };
+          $.ajax({
+            type: "POST",
+            url: "http://127.0.0.1:8000/barchart",
+            crossDomin: true,
+            data: data,
+            dataType: "json",
+            success: function(result) {
+              if (result.loginrequired_post == "true") {
+                alert("Need to login for whole page.");
+              } else {
+                var obj = new Object();
+                for (var i = 0; i < result.result.length; i++) {
+                  var obj = new Object();
+                  obj.y = result.result[i].project_name;
+                  obj.a = parseInt(result.result[i].Avg_PSF);
+                  dataL.push(obj);
+                }
+                window.mA = Morris.Bar({
+                  element: "barArea",
+                  data: dataL,
+                  xkey: "y",
+                  ykeys: ["a"],
+                  labels: ["AVG-PSF"],
+                  barColors: ["#2f66a8", "#bbb"],
+                  lineWidth: 0,
+                  fillOpacity: 0.5,
+                  gridTextSize: 10,
+                  hideHover: "auto",
+                  stacked: false,
+                  resize: true,
+                  redraw: true
+                });
+                dataL = [];
+              }
+            },
+            error: function() {
+              console.log("没有从服务器传回正确的数据");
+            }
+          });
+        });
+        $("#logout").click(function() {
+          $.cookie("name_of_usr", "");
+          window.location.href = "Agent_login.html";
+        });
+      });
+    </script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/index_ajax.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <!-- Bootstrap Core JS -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Slimscroll JS -->
+    <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- Datatables JS -->
+    <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/plugins/datatables/datatables.min.js"></script>
+    <script src="assets/plugins/raphael/raphael.min.js"></script>
+    <script src="assets/plugins/morris/morris.min.js"></script>
+    <script src="assets/js/chart.morris.js"></script>
+    <!-- Select2 JS -->
+    <script src="./assets/js/select2.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

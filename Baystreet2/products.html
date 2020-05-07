@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0"
+    />
+    <title>Baystreet Group INC - Dashboard</title>
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./assets/img/logoB.png"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+    <!-- Feathericon CSS -->
+    <link rel="stylesheet" href="assets/css/feathericon.min.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <!-- Header -->
+      <div class="header">
+        <!-- Logo -->
+        <div class="header-left">
+          <a href="index.html" class="logo">
+            <img src="assets/img/logo-via-logohub.png" alt="Logo" />
+          </a>
+          <a href="index.html" class="logo logo-small">
+            <img
+              src="assets/img/logo-small.png"
+              alt="Small-logo"
+              width="30"
+              height="30"
+            />
+          </a>
+        </div>
+        <!-- /Logo -->
+
+        <a href="javascript:void(0);" id="toggle_btn">
+          <i class="fe fe-text-align-left"></i>
+        </a>
+
+        <div class="top-nav-search">
+          <form>
+            <input type="text" class="form-control" placeholder="Search here" />
+            <button class="btn" type="submit">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+        </div>
+        <!-- Mobile Menu Toggle -->
+        <a class="mobile_btn" id="mobile_btn">
+          <i class="fa fa-bars"></i>
+        </a>
+        <!-- /Mobile Menu Toggle -->
+
+        <ul class="nav user-menu">
+          <li class="nav-item dropdown has-arrow show">
+            <a
+              href="#"
+              class="dropdown-toggle nav-link"
+              data-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <span class="user-name">Admin</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" id="logout" href="#"> Logout </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="sidebar" id="sidebar">
+        <div class="sidebar-inner slimscroll">
+          <div id="sidebar-menu" class="sidebar-menu">
+            <ul>
+              <li class="menu-title">
+                <span>Main</span>
+              </li>
+              <li class="active">
+                <a href="index.html"
+                  ><i class="fe fe-home"></i> <span>Dashboard</span></a
+                >
+              </li>
+              <li class="submenu">
+                <a href="#"
+                  ><i class="fe fe-cart"></i> <span>Condo-List</span>
+                  <span class="menu-arrow"></span
+                ></a>
+                <ul style="display: none;">
+                  <li><a href="products.html">Projects</a></li>
+                  <!-- <li><a href="nordic.html">Product View</a></li> -->
+                </ul>
+              </li>
+              <!-- <li class="submenu">
+                <a href="#"
+                  ><i class="fe fe-tiled"></i> <span> Application</span>
+                  <span class="menu-arrow"></span
+                ></a>
+                <ul style="display: none;">
+                  <li><a href="#">Calculate</a></li>
+                  <li><a href="#">Calendar</a></li>
+                </ul>
+              </li>
+              <li class="menu-title">
+                <span>Pages</span>
+              </li>
+              <li>
+                <a href="profile.html"
+                  ><i class="fe fe-user-plus"></i> <span>Profile</span></a
+                >
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- /Sidebar -->
+      <div class="page-wrapper filter">
+        <div class="content container-fluid">
+          <div class="page-header ">
+            <div class="row">
+              <div class="col">
+                <h3 class="page-title">Products</h3>
+                <ul class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a href="index.html">Dashboard</a>
+                  </li>
+                  <li class="breadcrumb-item active">Projects</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="button-group filters-button-group">
+                <a class="button is-checked" data-filter="*"
+                  ><span>All</span></a
+                >
+                <a class="button" data-filter=".Downtown"
+                  ><span>Downtown</span></a
+                >
+                <a class="button" data-filter=".NorthYork"
+                  ><span>North York</span></a
+                >
+                <a class="button" data-filter=".Markham"
+                  ><span>Markham</span></a
+                >
+                <a class="button" data-filter=".Midtown"
+                  ><span>Midtown</span></a
+                >
+                <a class="button" data-filter=".Mississauga"
+                  ><span>Mississauga</span></a
+                >
+                <a class="button" data-filter=".Etobicoke"
+                  ><span>Etobicoke</span></a
+                >
+                <a class="button" data-filter=".Vaughan"
+                  ><span>Vaughan</span></a
+                >
+                <a class="button" data-filter=".Oakville"
+                  ><span>Oakville</span></a
+                >
+                <a class="button" data-filter=".Thornhill"
+                  ><span>Thornhill</span></a
+                >
+                <a class="button" data-filter=".RichmondHill"
+                  ><span>Richmond Hill</span></a
+                >
+                <a class="button" data-filter=".Scarborough"
+                  ><span>Scarborough</span></a
+                >
+              </div>
+              <div class="row info"></div>
+            </div>
+          </div>
+          <!--
+                        <div class="col-xl-3 col-sm-6 col-12">
+                            <div class="product">
+                                <div class="pro-desc">
+                                    <h5>
+                                        <a href="#">Nordic Condo</a>
+                                    </h5>
+                                    <div class="price">Average PSF $900</div>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+        </div>
+      </div>
+    </div>
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/jquery.cookie.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/index_ajax.js"></script>
+    <script>
+      // ISOTOPE INITIALIZE
+      // RETURN THE TOTAL PRODUCTS AND FILTER ALL ITEMS
+      $(document).ready(function() {
+        login = $.cookie("name_of_usr");
+        $.ajax({
+          type: "GET",
+          url: "http://127.0.0.1:8000/products",
+          dataType: "json",
+          data: { login_name: $.cookie("name_of_usr") },
+          success: function(products) {
+            if (products.loginrequired_get == "true") {
+              alert("Need Login to show whole page.");
+              // window.location.href = "Agent_login.html";
+            } else {
+              var condoList = "";
+              $.each(products.result, function(i, n) {
+                redirect = n["Project_Name"] + ".html";
+                var str = n["Region"].replace(/\s/gi, "");
+                if (str == "Downtown") {
+                  condoList +=
+                    '<div class="col-xl-3 col-sm-6 col-12 element-item Downtown"><div class="product"><div class="pro-desc"><h5><a href="' +
+                    redirect +
+                    '"' +
+                    ">" +
+                    n["Project_Name"] +
+                    "</a></h5>" +
+                    '<div class="price">' +
+                    "Average PSF: " +
+                    " " +
+                    '<span style="color:rgba(255, 51, 0,0.8); font-weight:bold">' +
+                    n["Avg_PSF"] +
+                    "</span>" +
+                    "</div>" +
+                    "</div></div></div>";
+                }
+                if (str == "Markham") {
+                  condoList +=
+                    '<div class="col-xl-3 col-sm-6 col-12 element-item Markham"><div class="product"><div class="pro-desc"><h5><a href="' +
+                    redirect +
+                    '"' +
+                    ">" +
+                    n["Project_Name"] +
+                    "</a></h5>" +
+                    '<div class="price">' +
+                    "Average PSF: " +
+                    " " +
+                    '<span style="color:rgba(255, 51, 0,0.8); font-weight:bold">' +
+                    n["Avg_PSF"] +
+                    "</span>" +
+                    "</div>" +
+                    "</div></div></div>";
+                }
+                if (str == "NorthYork") {
+                  condoList +=
+                    '<div class="col-xl-3 col-sm-6 col-12 element-item NorthYork"><div class="product"><div class="pro-desc"><h5><a href="' +
+                    redirect +
+                    '"' +
+                    ">" +
+                    n["Project_Name"] +
+                    "</a></h5>" +
+                    '<div class="price">' +
+                    "Average PSF: " +
+                    " " +
+                    '<span style="color:rgba(255, 51, 0,0.8); font-weight:bold">' +
+                    n["Avg_PSF"] +
+                    "</span>" +
+                    "</div>" +
+                    "</div></div></div>";
+                }
+                if (str == "RichmondHill") {
+                  condoList +=
+                    '<div class="col-xl-3 col-sm-6 col-12 element-item RichmondHill"><div class="product"><div class="pro-desc"><h5><a href="' +
+                    redirect +
+                    '"' +
+                    ">" +
+                    n["Project_Name"] +
+                    "</a></h5>" +
+                    '<div class="price">' +
+                    "Average PSF: " +
+                    " " +
+                    '<span style="color:rgba(255, 51, 0,0.8); font-weight:bold">' +
+                    n["Avg_PSF"] +
+                    "</span>" +
+                    "</div>" +
+                    "</div></div></div>";
+                }
+                if (str == "Midtown") {
+                  condoList +=
+                    '<div class="col-xl-3 col-sm-6 col-12 element-item Midtown"><div class="product"><div class="pro-desc"><h5><a href="' +
+                    redirect +
+                    '"' +
+                    ">" +
+                    n["Project_Name"] +
+                    "</a></h5>" +
+                    '<div class="price">' +
+                    "Average PSF: " +
+                    " " +
+                    '<span style="color:rgba(255, 51, 0,0.8); font-weight:bold">' +
+                    n["Avg_PSF"] +
+                    "</span>" +
+                    "</div>" +
+                    "</div></div></div>";
+                }
+                if (str == "Mississauga") {
+                  condoList +=
+                    '<div class="col-xl-3 col-sm-6 col-12 element-item Mississauga"><div class="product"><div class="pro-desc"><h5><a href="' +
+                    redirect +
+                    '"' +
+                    ">" +
+                    n["Project_Name"] +
+                    "</a></h5>" +
+                    '<div class="price">' +
+                    "Average PSF: " +
+                    " " +
+                    '<span style="color:rgba(255, 51, 0,0.8); font-weight:bold">' +
+                    n["Avg_PSF"] +
+                    "</span>" +
+                    "</div>" +
+                    "</div></div></div>";
+                }
+                if (str == "Scarborough") {
+                  condoList +=
+                    '<div class="col-xl-3 col-sm-6 col-12 element-item Scarborough"><div class="product"><div class="pro-desc"><h5><a href="' +
+                    redirect +
+                    '"' +
+                    ">" +
+                    n["Project_Name"] +
+                    "</a></h5>" +
+                    '<div class="price">' +
+                    "Average PSF: " +
+                    " " +
+                    '<span style="color:rgba(255, 51, 0,0.8); font-weight:bold">' +
+                    n["Avg_PSF"] +
+                    "</span>" +
+                    "</div>" +
+                    "</div></div></div>";
+                }
+                if (str == "Vaughan") {
+                  condoList +=
+                    '<div class="col-xl-3 col-sm-6 col-12 element-item Vaughan"><div class="product"><div class="pro-desc"><h5><a href="' +
+                    redirect +
+                    '"' +
+                    ">" +
+                    n["Project_Name"] +
+                    "</a></h5>" +
+                    '<div class="price">' +
+                    "Average PSF: " +
+                    " " +
+                    '<span style="color:rgba(255, 51, 0,0.8); font-weight:bold">' +
+                    n["Avg_PSF"] +
+                    "</span>" +
+                    "</div>" +
+                    "</div></div></div>";
+                }
+                if (str == "Etobicoke") {
+                  condoList +=
+                    '<div class="col-xl-3 col-sm-6 col-12 element-item Etobicoke"><div class="product"><div class="pro-desc"><h5><a href="' +
+                    redirect +
+                    '"' +
+                    ">" +
+                    n["Project_Name"] +
+                    "</a></h5>" +
+                    '<div class="price">' +
+                    "Average PSF: " +
+                    " " +
+                    '<span style="color:rgba(255, 51, 0,0.8); font-weight:bold">' +
+                    n["Avg_PSF"] +
+                    "</span>" +
+                    "</div>" +
+                    "</div></div></div>";
+                }
+                if (str == "Oakville") {
+                  condoList +=
+                    '<div class="col-xl-3 col-sm-6 col-12 element-item Oakville"><div class="product"><div class="pro-desc"><h5><a href="' +
+                    redirect +
+                    '"' +
+                    ">" +
+                    n["Project_Name"] +
+                    "</a></h5>" +
+                    '<div class="price">' +
+                    "Average PSF: " +
+                    " " +
+                    '<span style="color:rgba(255, 51, 0,0.8); font-weight:bold">' +
+                    n["Avg_PSF"] +
+                    "</span>" +
+                    "</div>" +
+                    "</div></div></div>";
+                }
+                if (str == "Thornhill") {
+                  condoList +=
+                    '<div class="col-xl-3 col-sm-6 col-12 element-item Thornhill"><div class="product"><div class="pro-desc"><h5><a href="' +
+                    redirect +
+                    '"' +
+                    ">" +
+                    n["Project_Name"] +
+                    "</a></h5>" +
+                    '<div class="price">' +
+                    "Average PSF: " +
+                    " " +
+                    '<span style="color:rgba(255, 51, 0,0.8); font-weight:bold">' +
+                    n["Avg_PSF"] +
+                    "</span>" +
+                    "</div>" +
+                    "</div></div></div>";
+                }
+              });
+              $(".info").append(condoList);
+              /* Filter - Isotope */
+              var $grid = $(".info").isotope({
+                // options
+                itemSelector: ".element-item",
+                layoutMode: "fitRows"
+              });
+              // filter items on button click
+              $(".filters-button-group").on("click", "a", function() {
+                var filterValue = $(this).attr("data-filter");
+                $grid.isotope({ filter: filterValue });
+              });
+              // change is-checked class on buttons
+              $(".button-group").each(function(i, buttonGroup) {
+                var $buttonGroup = $(buttonGroup);
+                $buttonGroup.on("click", "a", function() {
+                  $buttonGroup.find(".is-checked").removeClass("is-checked");
+                  $(this).addClass("is-checked");
+                });
+              });
+            }
+          },
+          error: function() {
+            console.log("没有从服务器传回正确的数据");
+          }
+        });
+        $("#logout").click(function() {
+          $.cookie("name_of_usr", "");
+          window.location.href = "Agent_login.html";
+        });
+      });
+    </script>
+
+    <!-- Bootstrap Core JS -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Slimscroll JS -->
+    <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,389 @@
+/*-----------------
+  New Condos
+-----------------------*/
+#details {
+  padding-bottom: 30px !important;
+  margin-bottom: 0 !important;
+  font-family: "Roboto", Arial, sans-serif;
+}
+.rounded {
+  border-radius: 5px !important;
+}
+#details .title {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 700;
+  font-family: Roboto, Arial, sans-serif;
+  color: #3c4044;
+  padding-bottom: 15px;
+  display: block;
+}
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+#details .div-content {
+  margin-bottom: 5px;
+  display: block;
+}
+#details .content-title {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #92969a;
+  display: inline-block;
+}
+#details .content-text {
+  font-size: 14px;
+  line-height: 1.5;
+  display: inline-block;
+}
+#amenities {
+  padding-bottom: 30px !important;
+  margin-bottom: 0 !important;
+}
+#amenities .title {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 700;
+  font-family: Roboto, Arial, sans-serif;
+  color: #3c4044;
+  padding-bottom: 15px;
+  display: block;
+}
+#amenities .all-amenities {
+  max-height: 70px;
+  overflow: hidden;
+}
+#amenities .content-text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #3c4044;
+}
+#amenities .amenities-icon {
+  color: #2585c5;
+}
+#amenities .amenitiesbtn {
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 16px;
+  color: #2585c5;
+  padding-top: 10px;
+}
+#amenities .less {
+  display: none;
+}
+#prices {
+  padding-bottom: 30px !important;
+  margin-bottom: 0 !important;
+}
+#prices .title {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 700;
+  font-family: Roboto, Arial, sans-serif;
+  color: #3c4044;
+  padding-bottom: 15px;
+  display: block;
+}
+#prices .dev-prices {
+  display: block;
+  margin-bottom: 5px;
+}
+#prices .content-title {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #92969a;
+  display: inline-block;
+}
+#prices .content-text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #3c4044;
+  display: inline-block;
+}
+#qa .title {
+  font-size: 22px;
+  font-family: Roboto, Arial, sans-serif;
+  line-height: 30px;
+  font-weight: 700;
+  color: #3c4044;
+  padding-bottom: 15px;
+  display: block;
+}
+#qa .content-text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #3c4044;
+}
+#qa {
+  padding-bottom: 50px !important;
+  margin-bottom: 0 !important;
+}
+#qa .content-text .summary-box-more {
+  max-height: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+}
+#qa .content-text .less {
+  display: none;
+}
+#qa .content-text .more,
+#qa .content-text .less {
+  font-weight: 500;
+  cursor: pointer;
+  color: #2585c5;
+  padding-top: 10px;
+}
+#qa .content-text .summary-box-more .fadeToWhite {
+  display: block;
+  width: 100%;
+  height: 45px;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #fff 100%);
+}
+#sale_rental .title {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  font-family: Roboto, Arial, sans-serif;
+  color: #3c4044;
+  padding-bottom: 15px;
+  display: block;
+}
+#sale_rental {
+  padding-bottom: 50px !important;
+  margin-bottom: 0 !important;
+}
+/*-----------------
+    Bootstrap Modal CSS
+  -----------------------*/
+ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+.type-ahead-input label {
+  font-size: 1.4rem;
+  line-height: 1.42857;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.9);
+  display: block;
+  margin: 12px 0 3px;
+}
+.pv-add-with-suggestions__typeahead {
+  margin-top: 1px;
+}
+.type-ahead-wrapper {
+  position: relative;
+}
+.type-ahead-input-wrapper {
+  display: flex;
+  align-items: center;
+}
+.type-ahead-input {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+.type-ahead-input label {
+  margin: 0;
+}
+.visually-hidden {
+  display: block !important;
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+
+.pv-add-with-suggestions__typeahead .typeahead-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 4px;
+}
+li-icon {
+  display: inline-block;
+  width: 300px;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+}
+.pv-add-with-suggestions__typeahead .type-ahead-input > input {
+  font-size: 1rem;
+  line-height: 1.42857;
+  font-weight: 400;
+  transition-duration: 334ms;
+  transition-property: border-color, box-shadow;
+  box-shadow: none;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  width: 100%;
+  outline: 0;
+  height: 32px;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.9);
+  padding: 0 48px 0 32px;
+}
+.pv-add-with-suggestions__typeahead .type-ahead-input-icons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  right: 4px;
+}
+.pv-add-with-suggestions__typeahead .type-ahead-cancel {
+  display: none;
+}
+.type-ahead-input-wrapper > button {
+  font-size: 1rem;
+  line-height: 1.75;
+  font-weight: 400;
+  color: #fff;
+  margin: 0 16px 0 8px;
+}
+li-icon > svg {
+  display: block;
+  margin: auto;
+}
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.type-ahead-input .type-ahead-input-icons button {
+  width: 24px;
+  height: 24px;
+}
+a[href],
+button {
+  touch-action: manipulation;
+}
+li-icon[type$="-icon"] {
+  width: 24px;
+  height: 24px;
+}
+.pv-add-with-suggestions__typeahead .type-ahead-input-icons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  right: 4px;
+}
+.suggest_head_mt5 {
+  margin-top: 30px !important;
+}
+.suggest_head_mt3 {
+  margin-bottom: 12px !important;
+}
+.suggest_head_mb3 {
+  margin-bottom: 12px !important;
+}
+.suggest_head_font {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.9);
+}
+.suggest_added_mt4 {
+  margin-top: 16px !important;
+}
+.artdeco-pill {
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  box-sizing: border-box;
+  font-weight: 600;
+  line-height: 1;
+  display: inline-flex;
+  font-family: inherit;
+  justify-content: center;
+  position: relative;
+  transition-property: background-color, box-shadow, color;
+}
+
+/*--使用transition-property 应该设置不同的class的内容的不同 --*/
+.artdeco-pill--toggle {
+  color: rgba(0, 0, 0, 0.6);
+}
+.artdeco-pill--toggle:hover,
+.artdeco-pill--toggle:hover:visited {
+  color: rgba(0, 0, 0, 0.8);
+}
+.artdeco-pill--toggle,
+.artdeco-pill--toggle:visited {
+  background-color: rgba(199, 209, 216, 0.45);
+}
+.artdeco-pill--toggle:hover,
+.artdeco-pill--toggle:hover:visited {
+  background-color: rgba(199, 209, 216, 0.85);
+}
+.artdeco-pill--selected,
+.artdeco-pill--selected:visited {
+  background-color: #0073b1;
+}
+.artdeco-pill--selected:hover,
+.artdeco-pill--selected:hover:visited {
+  background-color: #006097;
+}
+.artdeco-pill--toggle.artdeco-pill--selected,
+.artdeco-pill--toggle.artdeco-pill--selected:active,
+.artdeco-pill--toggle.artdeco-pill--selected:hover,
+.artdeco-pill--toggle.artdeco-pill--selected:hover:visited,
+.artdeco-pill--toggle.artdeco-pill--selected:visited {
+  color: #fff;
+}
+.pv-add-with-suggestions__added-skill,
+.pv-add-with-suggestions__suggested-skill {
+  display: inline-block;
+  margin: 0 8px 12px 0;
+}
+
+.artdeco-pill--3 {
+  border-radius: 50px;
+  font-size: 1rem;
+  padding: 8px 12px;
+}
+.artdeco-pill__text {
+  font-weight: bold;
+  outline: 0;
+}
+li-icon[type$="-icon"][size="small"] {
+  width: 16px;
+  height: 16px;
+}
+.artdeco-pill--toggle .artdeco-pill__icon,
+.artdeco-pill__button,
+.artdeco-pill__label--inline {
+  margin: 0 -2px 2px 4px;
+}
+li-icon[type$="-icon"] > svg {
+  vertical-align: top;
+}
+li-icon > svg {
+  display: block;
+  margin: auto;
+}
+.pv-add-with-suggestions__suggested-skills-list {
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+}
+.pv-add-with-suggestions__added-skills-list {
+  max-height: 176px;
+  overflow: auto;
+}
